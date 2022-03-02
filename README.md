@@ -1,4 +1,4 @@
-## 📌 Questions to bookmark/revisit
+## 📌 Questions to bookmark/revisit/attempt
 
 ### Overview
 - [Easy](#easy)
@@ -7,10 +7,11 @@
 ___
 ### Easy
 
-|Topic| Link|Revisit|
+|Topic tag| Link|Revisit|
 |---|---|---|
 | array |https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/ |
 |array|https://leetcode.com/problems/create-target-array-in-the-given-order/|
+|array, divide & conquer | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) |
 
 ### Medium
 
