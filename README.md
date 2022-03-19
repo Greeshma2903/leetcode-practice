@@ -17,7 +17,7 @@ ___
 ### Medium
 
 |Topic tag|Link|Revisit|
-|---|---|
+|---|---|---|
 |String, Stack|[Score of Parenthesis](https://leetcode.com/problems/score-of-parentheses/)|
 
 ### Hard
