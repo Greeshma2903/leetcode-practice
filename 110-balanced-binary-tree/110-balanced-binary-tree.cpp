@@ -12,11 +12,8 @@
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
-        // make call to recursive function
-        int result = checkBalance(root);
-        
         // if value is -1, means the tree is not balanced
-        return (result != -1);
+        return (checkBalance(root) != -1);
     }
     
     int checkBalance(TreeNode *root)
