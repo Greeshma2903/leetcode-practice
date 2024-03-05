@@ -2,6 +2,7 @@ class Solution {
 public:
     int maxProfit(vector<int>& prices) {
         // Difference btwn i and ii) We can select multiple profile ranges
+        // APPROACH 1 ------------
         int i = 0, buy, sell, maxProfit = 0;
         int N = prices.size() - 1;
         while (i < N) {
@@ -21,5 +22,16 @@ public:
             maxProfit += (sell - buy);
         }
         return maxProfit;
+
+        /* 
+        // APPROCH 2 ------------
+        int profit = 0;
+        for (int i = 1; i < prices.size(); i++) {
+            // consider difference between peaks and vallies. If difference is
+            // negative, ignore it (by considering 0 profit)
+            profit += max(prices[i] - prices[i - 1], 0);
+        }
+        return profit;
+        */
     }
 };
