@@ -7,6 +7,7 @@ public:
         for(int i=0; i<nums.size(); i++) {
             if(uniVal.find(nums[i]) != uniVal.end()) {
                 val = nums[i];
+                break;
             } else uniVal.insert(nums[i]);
         }
         return val;
