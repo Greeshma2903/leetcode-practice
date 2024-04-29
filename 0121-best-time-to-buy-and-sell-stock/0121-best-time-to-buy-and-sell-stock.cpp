@@ -1,26 +1,25 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        if (prices.size() == 1)
-            return 0; // if only one day, return 0 profits
-        int profit = 0;
-        int left = 0;   // left pointer
-        int right = 1;  // right pointer
+        // optimize of profit windows
 
-        // two pointer approach
-        while (right < prices.size()) {
-            if (prices[left] < prices[right]) {
-                int cur_profit = prices[right] - prices[left];
-                profit =
-                    max(cur_profit,
-                        profit); // update profit based on current max value
-            } else {
-                // if prices on left is lower than right,
-                // move left pointer to current smallest value
+        int left = 0, right = 1;
+        int maxPro =  0;
+        
+        while (right < prices.size())
+        {
+            // if buy prices is less than sell prices
+            if(prices[left] < prices[right])
+            {
+                maxPro = max(maxPro, prices[right] - prices[left]);
+            }
+            else {
+                // move left pointer ahead (buy day)
                 left = right;
             }
             right++;
         }
-        return profit;
+
+        return maxPro;
     }
 };
